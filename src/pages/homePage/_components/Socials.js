@@ -7,16 +7,16 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 const Socials = () => {
     return (
         <Box display='flex' mb={2}>
-            <IconButton>
+            <IconButton href='https://twitter.com/East_ML' target='_blank'>
                 <TwitterIcon />
             </IconButton>
-            <IconButton>
+            <IconButton href='https://www.instagram.com/micah.lew/' target='_blank'>
                 <InstagramIcon />
             </IconButton>
-            <IconButton>
+            <IconButton href='https://github.com/EastML' target='_blank'>
                 <GitHubIcon />
             </IconButton>
-            <IconButton>
+            <IconButton href='https://www.youtube.com/@East_ML' target='_blank'>
                 <YouTubeIcon />
             </IconButton>
         </Box>
