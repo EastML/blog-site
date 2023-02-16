@@ -7,7 +7,7 @@ import { darkTheme, lightTheme } from "../theme";
 import { Outlet } from "react-router-dom";
 import { navbarItems } from "../pages/homePage/utils";
 
-const PageContainer = ({ children }) => {
+const PageContainer = () => {
     const [drawer, setDrawer] = useState(false)
     const [theme, setTheme] = useState(lightTheme)
 
@@ -40,7 +40,7 @@ const PageContainer = ({ children }) => {
                             <ListItem disablePadding key={item.text}>
                                 <ListItemButton>
                                     <ListItemIcon><Typography fontSize='large'>{item.icon}</Typography></ListItemIcon>
-                                    <ListItemText primary={<Typography color={item.color}>{item.text}</Typography>} />
+                                    <ListItemText primary={<Typography color={`${item.color}.main`}>{item.text}</Typography>} />
                                 </ListItemButton>
                             </ListItem>
                         ))}
