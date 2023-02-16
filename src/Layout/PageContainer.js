@@ -4,6 +4,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useState } from "react";
 import { darkTheme, lightTheme } from "../theme";
+import { Outlet } from "react-router-dom";
 
 const PageContainer = ({ children }) => {
     const [drawer, setDrawer] = useState(false)
@@ -19,12 +20,15 @@ const PageContainer = ({ children }) => {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Box display='flex' justifyContent='flex-end'>
-                <IconButton sx={{ m: 1 }} onClick={handleSelectDarkTheme}>
-                    <DarkModeIcon />
-                </IconButton>
-                <IconButton sx={{ m: 1 }} onClick={handleSelectLightTheme}>
-                    <LightModeIcon />
-                </IconButton>
+                {theme === darkTheme ? (
+                    <IconButton sx={{ m: 1 }} onClick={handleSelectLightTheme}>
+                        <LightModeIcon />
+                    </IconButton>
+                ) : (
+                    <IconButton sx={{ m: 1 }} onClick={handleSelectDarkTheme}>
+                        <DarkModeIcon />
+                    </IconButton>
+                )}
                 <IconButton onClick={toggleDrawer} sx={{ m: 1 }}>
                     <MenuIcon />
                 </IconButton>
@@ -40,7 +44,7 @@ const PageContainer = ({ children }) => {
                 </Drawer>
             </Box>
             <main>
-                {children}
+                <Outlet />
             </main>
         </ThemeProvider>
     )
