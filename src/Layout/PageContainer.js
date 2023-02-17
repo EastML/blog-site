@@ -9,7 +9,7 @@ import { navbarItems } from "../pages/homePage/utils";
 
 const PageContainer = () => {
     const [drawer, setDrawer] = useState(false)
-    const [theme, setTheme] = useState(lightTheme)
+    const [theme, setTheme] = useState(darkTheme)
 
     const toggleDrawer = () => setDrawer(!drawer)
     const handleSelectDarkTheme = () => setTheme(darkTheme)

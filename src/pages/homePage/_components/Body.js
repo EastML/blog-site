@@ -1,17 +1,34 @@
-import { Box, Typography } from "@mui/material"
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material"
+import { CONSTANTS } from "../constants"
+
 
 const Body = () => {
     return (
         <Box>
             <Typography variant='h6' gutterBottom>A little about me</Typography>
             <Typography mb={2} fontWeight='300'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                {CONSTANTS.WELCOME}
             </Typography>
 
-            <Typography variant='h6' gutterBottom>Some of my personal commandments</Typography>
-            <Typography mb={2} fontWeight='300'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </Typography>
+            <Typography variant='h6'>Some of my personal commandments</Typography>
+            <List>
+                {CONSTANTS.COMMANDMENTS.map(commandment => (
+                    <ListItem>
+                        <ListItemText>
+                            {commandment}
+                        </ListItemText>
+                    </ListItem>
+                ))}
+            </List>
+
+            <Box display='flex' justifyContent='space-between' alignItems='center'>
+                <Typography>2023 Micah Lewis - Coded with 💖 in React.</Typography>
+                <Box display='flex' gap={2} justifyContent='flex-end' alignItems='flex-end' my={2}>
+                    {['error', 'warning', 'success', 'info'].map((color, i) => (
+                        <Box key={i} width={50} height={50} bgcolor={`${color}.main`}/>
+                    ))} 
+                </Box>
+            </Box>     
         </Box>
     )
 }
