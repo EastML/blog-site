@@ -2,7 +2,7 @@ import { Avatar, Box, Container } from "@mui/material"
 import avatar from '../../static/avatar.png'
 import Body from "./_components/Body"
 import Greeting from "./_components/Greeting"
-import Navbar from "./_components/Navbar"
+import Navbar from "../../components/Navbar"
 import Socials from "./_components/Socials"
 
 const HomePage = () => {

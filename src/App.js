@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PageContainer from './layout/PageContainer';
-import HomePage from './pages/homePage/HomePage';
+import BookPage from './pages/book/BookPage';
+import HomePage from './pages/home/HomePage';
 
 function App() {
   const router = createBrowserRouter([
@@ -11,6 +12,10 @@ function App() {
         {
           index: true,
           element: <HomePage />
+        },
+        {
+          path: '/books',
+          element: <BookPage />
         }
       ]
     }

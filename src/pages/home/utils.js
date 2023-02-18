@@ -2,19 +2,23 @@ export const navbarItems = [
     {
         text: 'Blog',
         icon: '📰',
-        color: 'error'
+        color: 'error',
+        link: '/blog'
     },
     {
         text: 'Coding',
         icon: '💻',
-        color: 'warning'
+        color: 'warning',
+        link: '/code'
     },{
         text: 'Hobbies',
         icon: '🎮',
-        color: 'success'
+        color: 'success',
+        link: '/hobby'
     },{
         text: 'Books',
         icon: '📚',
-        color: 'info'
+        color: 'info',
+        link: '/books'
     },
 ]
