@@ -31,7 +31,7 @@ const DigimonSection = () => {
                 </Typography>
                 <List>
                     {digimonProjects.map(project => (
-                        <ListItem>
+                        <ListItem key={project.name}>
                             <ListItemText>
                                 <Box display='flex' alignItems="center" mb={2}>
                                     {project.icon} <StyledSpan>{project.name}</StyledSpan>: <Link underline='hover' sx={{ ml: 1 }} href={project.link} target='_blank'>{project.link}</Link>

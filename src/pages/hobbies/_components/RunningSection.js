@@ -45,13 +45,13 @@ const RunningSection = () => {
                     <TableHead>
                         <TableRow>
                             {Object.keys(runAchievements[0]).map(property => (
-                                <TableCell>{property.toUpperCase()}</TableCell>
+                                <TableCell key={property}>{property.toUpperCase()}</TableCell>
                             ))}
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {runAchievements.map(achievement => (
-                            <TableRow>
+                            <TableRow key={achievement.feat}>
                                 <TableCell>
                                     {achievement.feat}
                                 </TableCell>
