@@ -1,10 +1,5 @@
-import styled from "@emotion/styled"
-import { Box, Typography } from "@mui/material"
-
-const StyledSpan = styled(Box)({
-    display: 'inline',
-    fontWeight: 600
-})
+import { Typography } from "@mui/material"
+import StyledSpan from "../../components/StyledSpan"
 
 export const CONSTANTS = {
     WELCOME: <Typography>Hi, my name is Micah, but I am more commonly called by my internet tag, <StyledSpan color='error.main'>East</StyledSpan>. I'm a software developer 👨‍💻 at a small company in big Tokyo, Japan. 🍙 I actually went to school to be a chef 🍳, but in the end, decided to become a software developer because <StyledSpan color='warning.main'>I love building.</StyledSpan> I often tell people that a chef and a programmer <StyledSpan color='success.main'>aren't really all that different you see.</StyledSpan> They both take ingredients [foods and frameworks] and make something. And at the end of the day, thats all I really want to do; 🌟 create something. This website is a great example actually 😄 I hope that as you explore this site you learn a little bit about me, if there is anything you're curious about or you feel the need to reach out, <StyledSpan color='info.main'>feel free</StyledSpan> to contact me on any of the socials I have above! ☝☝☝ Have fun!</Typography>,

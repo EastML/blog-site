@@ -5,7 +5,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { useState } from "react";
 import { darkTheme, lightTheme } from "../theme";
 import { Outlet } from "react-router-dom";
-import { navbarItems } from "../pages/homePage/utils";
+import { navbarItems } from "../pages/home/utils";
 
 const PageContainer = () => {
     const [drawer, setDrawer] = useState(false)
