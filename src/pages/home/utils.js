@@ -1,5 +1,11 @@
 export const navbarItems = [
     {
+        text: 'Home',
+        icon: '🌌',
+        color: 'primary',
+        link: '/'
+    },
+    {
         text: 'Blog',
         icon: '📰',
         color: 'error',
@@ -14,7 +20,7 @@ export const navbarItems = [
         text: 'Hobbies',
         icon: '🎮',
         color: 'success',
-        link: '/hobby'
+        link: '/hobbies'
     },{
         text: 'Books',
         icon: '📚',

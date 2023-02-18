@@ -49,7 +49,7 @@ const BookSection = () => {
                     )
                 }} 
                 helperText={
-                    <Box ml={-1}>
+                    <Box ml={-1} color='text.primary.main'>
                         {CONSTANTS.QUERY_HELPER}
                     </Box>
                 }
@@ -61,8 +61,8 @@ const BookSection = () => {
                         <Typography component='div'>
                             <StyledSpan>{book.title}</StyledSpan> - by: {book.author} - {book.rating}⭐
                         </Typography>
-                        <Typography fontStyle='italic' fontWeight={200} variant='caption'gutterBottom>
-                            tags: [{' '}
+                        <Typography fontStyle='italic' variant='caption' gutterBottom>
+                            Tags: [{' '}
                             {book.tags.map((tag, i) => (
                                 i === book.tags.length - 1 ? `${tag}` : `${tag} | `
                             ))}
