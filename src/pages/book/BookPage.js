@@ -8,7 +8,6 @@ const BookPage = () => {
     return (
         <Container>
             <Navbar />
-
             <Title mb={2}>
                 {CONSTANTS.TITLE}
             </Title>
