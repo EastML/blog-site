@@ -1,4 +1,4 @@
-import { Link, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
+import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
 import { CONSTANTS } from "../constants"
 
 const RunningSection = () => {
@@ -32,13 +32,13 @@ const RunningSection = () => {
 
     return (
         <section>
-            <Typography variant='h6' gutterBottom>
+            <Typography variant='h6' mb={2} color='success.main'>
                 {CONSTANTS.RUNNING.TITLE}
             </Typography>
+            <Box pl={4} mb={4}>
             <Typography>
                 {CONSTANTS.RUNNING.DESCRIPTION}
             </Typography>
-
             <Typography align='center' mt={2}>{CONSTANTS.RUNNING.FEATS}</Typography>
             <TableContainer sx={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
                 <Table size='small' sx={{ my: 2 }}>
@@ -67,6 +67,7 @@ const RunningSection = () => {
                 </Table>
             </TableContainer>
             {CONSTANTS.RUNNING.NRC_SHOUTOUT}
+            </Box>
         </section>
     )
 }
