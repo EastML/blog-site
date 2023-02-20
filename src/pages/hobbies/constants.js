@@ -12,5 +12,9 @@ export const CONSTANTS = {
     DIGIMON: {
         TITLE: "The Digimon Trading Card Game 👾",
         DESCRIPTION: "A pretty large part of my childhood was dedicated to playing the Pokemon Card Game and Yugioh. Those hobbies continued until around the beginning of high school, where I got really deep into fighting games. Fast-foward to the beginning of COVID, I was looking to get into a new card game after nearly ten years, and the Digimon Card Game which had just come out in Japan seemed like an interesting fit, so I picked up a starter deck and dived right in. By complete happenstance, a week later, a friend of mine reached out to me, asking about the production work I had done with fighting games [more on that below] and if I could do something similar with the Digimon Card Game project his team at work had just received from Bandai. Since then I've become a project manager, commentator, content creator, and even bigger fan of the game. You can find links to my work of the above items below:"
+    },
+    SHADOWVERSE: {
+        TITLE: 'Shadowverse CCG 📱',
+        DESCRIPTION: "Through the reccomendation of a friend, I got into a mobile card game popular in Japan called 'Shadowverse'. Its similar to Magic The Gathering in some ways, but the aesthetic is a bit more anime-ish. I was hired as a commentator for their official events for the SEAO region, and have been doing this as well undertaking other projects like building a website to log and track games, hosting my own tournaments, as well as special event series to increase the game's popularity. While you're here, if you're looking for a good mobile game, why not give it a try? 😁 The community is really close-knit and really friendly, which I think is a huge plus!"
     }
 }
