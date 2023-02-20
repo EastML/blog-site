@@ -4,6 +4,7 @@ import Title from "../../components/Title"
 import { CONSTANTS } from "./constants"
 import DigimonSection from "./_components/DigimonSection"
 import RunningSection from "./_components/RunningSection"
+import ShadowverseSection from "./_components/ShadowverseSection"
 
 const HobbiesPage = () => {
     return (
@@ -17,6 +18,7 @@ const HobbiesPage = () => {
             </Typography>
             <RunningSection />
             <DigimonSection />
+            <ShadowverseSection />
         </Container>
     )
 }
