@@ -4,6 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useState } from "react";
 import styled from "@emotion/styled";
+import { CONSTANTS } from "../constants";
 
 
 const ProjectCard = ({ project }) => {
@@ -29,7 +30,11 @@ const ProjectCard = ({ project }) => {
                         <OpenInNewIcon />
                     </IconButton>
                     <Box>
-                        <Typography variant='caption' mr={1}>More Info</Typography>
+                        {open ? (
+                            <Typography variant='caption' mr={1}>{CONSTANTS.LESS_INFO}</Typography>
+                        ) : (
+                            <Typography variant='caption' mr={1}>{CONSTANTS.MORE_INFO}</Typography>
+                        )}
                         <IconButton expand={open} onClick={handleToggleCollapse} aria-expanded={open} aria-label='show more'>
                             <StyledExpand />
                         </IconButton>
