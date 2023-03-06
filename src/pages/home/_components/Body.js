@@ -6,14 +6,14 @@ const Body = () => {
     return (
         <Box>
             <Typography variant='h6' gutterBottom>A little about me</Typography>
-            <Typography mb={2} fontWeight='300'>
+            <Typography component='div' mb={2} fontWeight='300'>
                 {CONSTANTS.WELCOME}
             </Typography>
 
             <Typography variant='h6'>Some of my personal commandments</Typography>
             <List>
-                {CONSTANTS.COMMANDMENTS.map(commandment => (
-                    <ListItem>
+                {CONSTANTS.COMMANDMENTS.map((commandment, i) => (
+                    <ListItem key={i}>
                         <ListItemText>
                             {commandment}
                         </ListItemText>
