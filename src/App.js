@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { DrawerProvider } from './drawerContext';
 import PageContainer from './layout/PageContainer';
 import BlogEntryPage from './pages/blog/BlogEntryPage';
 import BlogPage from './pages/blog/BlogPage';
@@ -42,7 +43,9 @@ function App() {
   ])
 
   return (
+    <DrawerProvider>
       <RouterProvider router={router} />
+    </DrawerProvider>
   );
 }
 
