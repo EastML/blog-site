@@ -49,7 +49,7 @@ const BookSection = () => {
                     )
                 }} 
                 helperText={
-                    <Box ml={-1} color='text.primary.main'>
+                    <Box ml={-1} color='text.primary.main' component='span'>
                         {CONSTANTS.QUERY_HELPER}
                     </Box>
                 }

@@ -18,13 +18,11 @@ const BlogPage = () => {
             </Box>
             <List>
             {blogList.map(blog => (
-                <ListItem key={blog[1].id}>
-                    <ListItemIcon>
-                        {blog[1].icon}
-                    </ListItemIcon>
+                <ListItem key={blog[0]}>
+                    <ListItemIcon>{blog[1].icon}</ListItemIcon>
                     <ListItemText>
                         <Typography component='div'>
-                            <Link key={blog[0]} href={`blog/${blog[0]}`} underline='hover'>
+                            <Link href={`blog/${blog[0]}`} underline='hover'>
                                 <StyledSpan>{blog[1].name}</StyledSpan> - {blog[1].date}
                             </Link>
                         </Typography>
@@ -34,7 +32,11 @@ const BlogPage = () => {
                         <Typography fontStyle='italic' variant='caption' gutterBottom>
                             Tags: [{' '}
                             {blog[1].tags.map((tag, i) => (
-                                i === blog[1].tags.length - 1 ? `${tag}` : `${tag} | `
+                                i === blog[1].tags.length - 1 ? (
+                                    <Typography variant='caption' key={i}>{tag}</Typography>
+                                ) : (
+                                    <Typography variant='caption' key={i}>{tag} | </Typography>
+                                )
                             ))}
                             {' '}]
                         </Typography>

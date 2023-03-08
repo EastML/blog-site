@@ -35,7 +35,7 @@ const ProjectCard = ({ project }) => {
                         ) : (
                             <Typography variant='caption' mr={1}>{CONSTANTS.MORE_INFO}</Typography>
                         )}
-                        <IconButton expand={open} onClick={handleToggleCollapse} aria-expanded={open} aria-label='show more'>
+                        <IconButton onClick={handleToggleCollapse} aria-expanded={open} aria-label='show more'>
                             <StyledExpand />
                         </IconButton>
                     </Box>
