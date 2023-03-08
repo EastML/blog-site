@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { DrawerProvider } from './drawerContext';
 import PageContainer from './layout/PageContainer';
+import BlogEntryPage from './pages/blog/BlogEntryPage';
+import BlogPage from './pages/blog/BlogPage';
 import BookPage from './pages/book/BookPage';
 import CodingPage from './pages/coding/CodingPage';
 import HobbiesPage from './pages/hobbies/HobbiesPage';
@@ -26,13 +29,23 @@ function App() {
         {
           path: '/code',
           element: <CodingPage />
+        },
+        {
+          path: '/blog',
+          element: <BlogPage />,
+        },
+        {
+          path: '/blog/:blogId',
+          element: <BlogEntryPage />
         }
       ]
     }
   ])
 
   return (
+    <DrawerProvider>
       <RouterProvider router={router} />
+    </DrawerProvider>
   );
 }
 
