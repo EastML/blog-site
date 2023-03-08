@@ -1,10 +1,11 @@
-import { Container, Typography } from "@mui/material"
+import { Box, Button, Container, Typography } from "@mui/material"
 import { useParams } from "react-router-dom"
 import Navbar from "../../components/Navbar"
 import ReactMarkdown from 'react-markdown'
 import { useEffect, useState } from "react"
 import { blogs } from "./BlogFiles/_blogs"
 import remarkGfm from "remark-gfm"
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const BlogEntryPage = () => {
     const { blogId } = useParams()
@@ -33,8 +34,13 @@ const BlogEntryPage = () => {
             {content ? (
                 <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
             ) : (
-                <Typography>Yeah, yeah, give me a second. I'm lookin fer it.</Typography>
+                <Typography>Yeah, yeah, give me a second. I'm lookin fer it...</Typography>
             )}
+            <Box display='flex' justifyContent='center'>
+                <Button variant='outlined' startIcon={<ArrowBackIcon/>} href='/blog'>
+                    Head back to the list of blogs 
+                </Button>
+            </Box>
         </Container>
     )
 }
